@@ -1,0 +1,15 @@
+<div id="custom_waste">
+
+</div>
+
+<script>
+    $('#custom_waste').html('Loading General Waste tables...')
+    $.ajax({
+        type: "POST",
+        url: '<%= request.protocol + '://' + request.host_with_port %>/high_scores/load_anything',
+        data: 'year=2015',
+        success: function(data){
+            $('#custom_waste').html('mooo')
+        }
+    });
+</script>
